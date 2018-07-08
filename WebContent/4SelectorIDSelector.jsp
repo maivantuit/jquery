@@ -20,28 +20,31 @@
 <script type="text/javascript">
 	//Use JQuery:
 	$(document).ready(function() {
+
 		$('#btn1').click(function() {
 			// Hiển thị đã click:
-			/* alert('Clicked'); */
+			alert('Clicked');
 			// Dùng js để làm đổi màu:
-			/* document.getElementById('btn1').style.backgroundColor = 'yellow'; */
+			document.getElementById('btn1').style.backgroundColor = 'yellow';
 			// Dùng jquery để làm đổi màu:
-			/* $('#btn1').css('background-color','yellow'); */					
-		});				
+			$('#btn1').css('background-color', 'yellow');
+		});
 	});
-	
+	// Tạo biến selector để use again.
 	$(document).ready(function() {
 		// eleBtn: Id selector.
-		var eleBtn =$('#btn1'); 
+		var eleBtn = $('#btn1');
 		eleBtn.click(function() {
-			eleBtn.css('background-color','yellow');					
-		});				
+			eleBtn.css('background-color', 'yellow');
+		});
 	});
-	
+
 	// Kiểm tra sự tồn tại của id button:
-	$(document).ready(function() {
-		var eleBtn =$('#btn1'); 
-		(eleBtn.length > 0 )? alert('Tìm thấy phần tử') :('Không tìm thấy phần tử'); 				
+	$(document).ready(
+			function() {
+				var eleBtn = $('#btn1');
+				(eleBtn.length > 0) ? alert('Tìm thấy phần tử [btn1]')
+						: ('Không tìm thấy phần tử [btn1]');
 	});
 </script>
 </head>
